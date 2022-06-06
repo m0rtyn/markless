@@ -1,9 +1,18 @@
 {
-	"name": "markless-sean10",
-	"publisher": "sean10",
-	"displayName": "Markless_sean10",
-	"description": "Inline markdown preview.  Vim mode and WYSIWYG mermaid, latex and image rendering. Support something custom which modified by sean10.",
+	"name": "markless_plus",
+	"publisher": "m0rtyn",
+	"displayName": "Markless+",
+	"description": "Inline markdown preview. Vim mode, WYSIWYG, Mermaid, Latex and image rendering.",
 	"version": "1.0.24",
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js",
+		"vscode:prepublish": "npm run -S esbuild-base -- --minify",
+		"esbuild-base": "esbuild ./src/extension.js --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+		"esbuild": "npm run -S esbuild-base -- --sourcemap",
+		"esbuild-watch": "npm run -S esbuild-base -- --sourcemap --watch"
+	},
 	"engines": {
 		"vscode": "^1.56.0"
 	},
@@ -20,19 +29,21 @@
 		"preview",
 		"inline",
 		"latex",
-		"typora"
+		"typora",
+		"notion",
+		"rendering"
 	],
 	"author": {
-		"name": "Tejasvi S. Tomar",
-		"url": "https://mefyi.com"
+		"name": "Martyn",
+		"url": "https://someta.site"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/sean10/markless"
+		"url": "https://github.com/m0rtyn/markless"
 	},
 	"icon": "assets/icon.png",
 	"bugs": {
-		"url": "https://github.com/sean10/markless"
+		"url": "https://github.com/m0rtyn/markless"
 	},
 	"activationEvents": [
 		"onLanguage:markdown"
@@ -199,15 +210,6 @@
 		"remark-math": "^4.0.0",
 		"remark-parse": "^9.0.0",
 		"unified": "^9.2.1"
-	},
-	"scripts": {
-		"lint": "eslint .",
-		"pretest": "npm run lint",
-		"test": "node ./test/runTest.js",
-		"vscode:prepublish": "npm run -S esbuild-base -- --minify",
-		"esbuild-base": "esbuild ./src/extension.js --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
-		"esbuild": "npm run -S esbuild-base -- --sourcemap",
-		"esbuild-watch": "npm run -S esbuild-base -- --sourcemap --watch"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.3",
