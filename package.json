@@ -1,5 +1,5 @@
 {
-	"name": "markless_plus",
+	"name": "markless-plus",
 	"publisher": "m0rtyn",
 	"displayName": "Markless+",
 	"description": "Inline markdown preview. Vim mode, WYSIWYG, Mermaid, Latex and image rendering.",
