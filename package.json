@@ -3,7 +3,7 @@
 	"publisher": "m0rtyn",
 	"displayName": "Markless+",
 	"description": "Inline markdown preview. Vim mode, WYSIWYG, Mermaid, Latex and image rendering.",
-	"version": "1.0.24",
+	"version": "1.1.0",
 	"scripts": {
 		"lint": "eslint .",
 		"pretest": "npm run lint",
