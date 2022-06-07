@@ -1,8 +1,9 @@
-<div align="center" id="top"><img src="assets/logo.png" align="center" alt="markless" width="425"></div>
+<div align="center" id="top">
+    <img src="assets/logo.png" align="center" alt="markless" width="425">
+</div>
 
 <div align="center">
-
-Inspired by Typora<sup>[diff](#differences)</sup>
+    Inspired by Typora<sup>[diff](#differences)</sup>
 </div>
 
 Preview markdown inline and extend the capabilities through existing VS Code extensions.
@@ -205,12 +206,16 @@ Bracket pair colorizers interfere with the rendering. If you use one, install th
 ---
 
 # FAQ
+
 ## Q: How to make Images Preview always maximized
+
 Set vscode settings `Workbench › Panel: Opens Maximized` as `always`.
 
 
 # DEBUG
+
 ## Set workspace's setting `markless.debug` to `true`
+
 Then `log.debug` will log to console.
 
 # **Differences**
