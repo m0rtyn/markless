@@ -3,15 +3,13 @@
 	"publisher": "m0rtyn",
 	"displayName": "Markless+",
 	"description": "Inline markdown preview. Vim mode, WYSIWYG, Mermaid, Latex and image rendering.",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"scripts": {
+		"build": "esbuild ./src/extension.js --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+		"start": "npm run -S build -- --sourcemap --watch",
+		"prepublish": "npm run -S build -- --minify",
 		"lint": "eslint .",
-		"pretest": "npm run lint",
-		"test": "node ./test/runTest.js",
-		"vscode:prepublish": "npm run -S esbuild-base -- --minify",
-		"esbuild-base": "esbuild ./src/extension.js --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
-		"esbuild": "npm run -S esbuild-base -- --sourcemap",
-		"esbuild-watch": "npm run -S esbuild-base -- --sourcemap --watch"
+		"test": "node ./test/runTest.js"
 	},
 	"engines": {
 		"vscode": "^1.56.0"
@@ -53,7 +51,7 @@
 		"viewsContainers": {
 			"activitybar": [
 				{
-					"id": "markless",
+					"id": "markless-plus",
 					"icon": "assets/activityBar.svg",
 					"title": ""
 				}
@@ -103,7 +101,7 @@
 		},
 		"configuration": [
 			{
-				"title": "Markless",
+				"title": "Markless plus",
 				"properties": {
 					"markless.emphasis": {
 						"description": "Decorate bold, italics and strikethrough",
@@ -224,8 +222,8 @@
 		"vscode-test": "^1.5.0"
 	},
 	"__metadata": {
-		"id": "31b769d3-ba13-4af3-a7e8-5257e0df28b1",
-		"publisherDisplayName": "Tejasvi S. Tomar",
-		"publisherId": "48cdae1f-c60f-474f-95a2-86dd106fcb49"
+		"id": "",
+		"publisherDisplayName": "m0rtyn",
+		"publisherId": ""
 	}
 }

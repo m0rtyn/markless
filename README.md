@@ -17,6 +17,8 @@ Preview markdown inline and extend the capabilities through existing VS Code ext
     - [**URLs**](#urls)
     - [**Images**](#images)
       - [**Preview on hover**](#preview-on-hover)
+        - [**Preview on hover**](#preview-on-hover)
+          - [**Preview on hover**](#preview-on-hover)
       - [**Preview inline**](#preview-inline)
     - [**Inline code**](#inline-code)
     - [**LaTeX**](#latex)

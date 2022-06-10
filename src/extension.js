@@ -197,10 +197,9 @@ function bootstrap(context) {
 					// let temp = posToRange(start, endSymbolNeedDecoration);
 					// log.debug("dont hide: ", value, temp.start.line, temp, temp.start, start, endSymbolNeedDecoration);
 				}
-				// console.log("value", value, "offset: ",  state.offset, "start: ", start , " end: ", end);
 				addDecoration(hideDecoration, start, endSymbolNeedDecoration);
 				addDecoration(getEnlargeDecoration(state.fontSize + Math.ceil(state.fontSize) / 6 * (7 - node.depth)), endSymbolNeedDecoration, end);
-				addDecoration(getlistRainbowDecoration(node.depth), endSymbolNeedDecoration, end);
+				// addDecoration(getlistRainbowDecoration(node.depth), endSymbolNeedDecoration, end);
 			};
 		})()]],
 		["horizontalRule", ["thematicBreak", (() => {
@@ -285,8 +284,8 @@ function bootstrap(context) {
 						addDecoration(getCheckedDecoration(node.checked), start, textStart - 1);
 					}
 				}
-				// console.log("wc: node: ", JSON.stringify(node));
-				// console.log("wc: listLevel: ", listLevel);
+				// TODO: fix color decoration for list items
+				// NOTE: working only for color of the links in a list items
 				addDecoration(getlistRainbowDecoration(listLevel), textStart, textEnd);
 			};
 		})()]],
